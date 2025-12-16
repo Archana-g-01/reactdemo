@@ -18,3 +18,8 @@ jobs:
         uses: SonarSource/sonarcloud-github-action@v2
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        with:
+          args: >
+            -Dsonar.projectKey= ${{ secrets.PROJECT_KEY }}
+            -Dsonar.organization= ${{ secrets.ORGANIZATION_KEY }}
+
